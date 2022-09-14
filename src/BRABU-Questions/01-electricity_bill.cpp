@@ -49,9 +49,16 @@ public:
 int main()
 {
     int unit = 0;
+    char name[30];
+    cout << "write name of user: ";
+    cin >> name;
     cout << "Write your electriciy consumption(in units): ";
     cin >> unit;
     ElectricBill bill(unit);
-    cout << "Total charge: " << bill.calculateCharge() << endl;
+
+    cout << "==========BILL DETAILS==========" << endl;
+    cout << "Name " << name << endl;
+    cout << "Units consumed: " << unit << endl;
+    cout << "Total charge: Rs " << bill.calculateCharge() << endl;
     return 0;
 }
