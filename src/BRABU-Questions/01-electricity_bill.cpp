@@ -1,3 +1,13 @@
+/*Question:
+  An electriciy board charges the following rates to domestic users to discourage large consumption of energy:
+  For the first 100 units - 50 Paisa/Unit,
+  For the next 200 units - 80 Paisa/Unit,
+  Beyond 300 units - 90 Paisa/Unit,
+  All users are changed a minimum of rupees 50.00.
+  If the total amount is more than Rs 300 then and additional surchange of 15% is added.
+  Write a C++ program to read the names of users and number of units consumed and print out the charges with name.
+
+*/
 #include <iostream>
 using namespace std;
 class ElectricBill
