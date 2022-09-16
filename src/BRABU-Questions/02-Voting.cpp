@@ -16,16 +16,17 @@ class Election
     int whoIsWinner()
     {
         int max = voteCount[0];
+        int lastMax = -1;
         short winner = 0;
         for (int i = 0; i < 5; i++)
-            if (max < voteCount[i])
+            if (max <= voteCount[i])
             {
+                lastMax = max; // saving last max votes
                 winner = i;
                 max = voteCount[i];
             }
-        for (int i = 0; i < 5; i++)
-            if (max == voteCount[i])
-                return -1;
+        if (lastMax == max)
+            return -1;
         return ++winner;
     }
 
